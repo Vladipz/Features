@@ -1,0 +1,41 @@
+:host {
+  display: block;
+  padding: 20px 12px;
+}
+
+.main-menu-list {
+  grid-gap: 8px;
+  display: grid;
+  list-style: none;
+}
+.menu-item {
+  background: none;
+  // padding: 16px 12px;
+  cursor: pointer;
+  border: none;
+  color: var(--light-color);
+  display: grid;
+  grid-template-columns: 16px 1fr max-content;
+  grid-gap: 12px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  border-radius: 2px;
+
+  &:hover,
+  &:focus-visible {
+    background: var(--dark-hover-color);
+    color: var(--primary-color);
+    .menu-item svg {
+    color: var(--primary-color)
+    }
+  }
+}
+
+.menu-item svg {
+  width: 16px;
+  height: 16px;
+}

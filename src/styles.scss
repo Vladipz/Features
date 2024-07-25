@@ -1,0 +1,106 @@
+@import "fonts";
+@import "margins";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --dark-color: #000000;
+  --light-color: #ffffff;
+  --primary-color: #ae7aff;
+  --gray-color: #5f646d;
+  --dark-hover-color: #161616;
+}
+
+body {
+  background: var(--dark-color);
+  color: var(--light-color);
+  font-family: "JetBrains Mono", sans-serif;
+  background-image: url(/assets/imgs/bg_img.jpg);
+  background-size: cover;
+}
+
+.skill-tag {
+  padding: 0 8px;
+  border-radius: 4px;
+  border: 1px solid var(--light-color);
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
+  height: 24px;
+}
+.btn {
+  width: 100%;
+  border: none;
+  background: var(--primary-color);
+  color: var(--dark-color);
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid var(--dark-color);
+}
+.btn-shadow {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    background: var(--gray-color);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-radius: 4px;
+  }
+}
+
+.h6 {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 800;
+}
+.h1 {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 800;
+}
+
+.subtitle {
+  font-size: 14px;
+  line-height: 21;
+}
+
+.tt-control-label {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  display: block;
+}
+.tt-input {
+  width: 100%;
+  margin-top: 8px;
+  display: grid;
+  border: 1px solid var(--light-color);
+  border-radius: 4px;
+  padding: 12px 20px;
+  background-color: var(--dark-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  font-family: "JetBrains Mono", sans-serif;
+  color: var(--light-color);
+}
+
+.login-form {
+  width: 80%;
+}

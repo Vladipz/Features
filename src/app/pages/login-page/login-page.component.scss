@@ -1,0 +1,27 @@
+:host {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100dvh;
+  align-items: center;
+  margin: 0 10%;
+  justify-items: center; /* Вирівнює всі елементи по горизонталі */
+}
+
+.password-input {
+  position: relative;
+}
+.password-eye-button {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-40%);
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.password-eye-button.active {
+  color: var(--primary-color)
+}
+
