@@ -1,9 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { catchError, tap, throwError } from 'rxjs';
 import { TokenResponce } from './auth.interface';
 import { environment } from '../../environments/environment';
 import { CookieService } from 'ngx-cookie-service';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 
 @Injectable({
