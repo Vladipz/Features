@@ -1,15 +1,27 @@
 <img class="ml16 mb20" src="/assets/svg/logo-small.svg" alt="" />
 
-
-
 <nav>
   <ul class="main-menu-list">
-    <li>
-      <button class="menu-item">
-        <svg icon="home"></svg>
+    <li *ngFor="let menuItem of menuItems">
+      <a
+        class="menu-item"
+        [routerLink]="[menuItem.link]"
+        routerLinkActive="router-link-active"
+      >
+        <svg [icon]="menuItem.icon"></svg>
 
-        <span>Мій профіль</span>
-      </button>
+        <span>{{ menuItem.label }}</span>
+      </a>
     </li>
   </ul>
 </nav>
+<p class="medium-text mb20 mt20" style="color: var(--gray-color)">Підписники</p>
+@for (profile of subscribers$ | async; track profile.id) {
+  <app-subscriber-card [profile]="profile"></app-subscriber-card>
+}
+<div class="to-subscribers mt20">
+  <a [routerLink]="['/subscribers']" class="to-subscribers-link medium-text"
+    >Всі фоловери</a
+  >
+  <svg icon="arrow" class="to-subscribers-icon"></svg>
+</div>

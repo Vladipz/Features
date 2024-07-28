@@ -1,6 +1,7 @@
 :host {
   display: block;
   padding: 20px 12px;
+  background-color: black;
 }
 
 .main-menu-list {
@@ -10,7 +11,7 @@
 }
 .menu-item {
   background: none;
-  // padding: 16px 12px;
+  padding: 16px 12px;
   cursor: pointer;
   border: none;
   color: var(--light-color);
@@ -24,13 +25,14 @@
   font-size: 14px;
   line-height: 24px;
   border-radius: 2px;
+  text-decoration: none;
 
   &:hover,
   &:focus-visible {
     background: var(--dark-hover-color);
     color: var(--primary-color);
     .menu-item svg {
-    color: var(--primary-color)
+      color: var(--primary-color);
     }
   }
 }
@@ -38,4 +40,18 @@
 .menu-item svg {
   width: 16px;
   height: 16px;
+}
+.to-subscribers {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.to-subscribers-link {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+.to-subscribers-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--primary-color);
 }

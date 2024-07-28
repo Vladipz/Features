@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
+import { map } from 'rxjs';
+import { Pageble } from '../interfaces/pageble.interface';
 import { Profile } from '../interfaces/profile.interface';
 
 @Injectable({
@@ -12,6 +14,12 @@ export class ProfileService {
 
   getTestsAccaunts() {
     return this.http.get<Profile[]>(`${this.baseApiUrl}account/test_accounts`);
+  }
+
+  getSubscribersShortList() {
+    return this.http
+      .get<Pageble<Profile>>(`${this.baseApiUrl}account/subscribers/`)
+      .pipe(map((res) => res.items.slice(0, 3)));
   }
 
   getMe() {

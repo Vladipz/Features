@@ -14,9 +14,14 @@
   --light-color: #ffffff;
   --primary-color: #ae7aff;
   --gray-color: #5f646d;
-  --dark-hover-color: #161616;
+  --dark-hover-color: #3c3c3c;
 }
-
+.medium-text {
+  font-family: "JetBrains Mono", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+}
 body {
   background: var(--dark-color);
   color: var(--light-color);
