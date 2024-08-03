@@ -1,0 +1,21 @@
+<img [src]="previw()" alt="" class="avatar" />
+
+<div
+  dnd
+  class="drop-zone"
+  tabindex="0"
+  (keyup.enter)="fileDrop.click()"
+  (fileDropped)="onFileDropped($event)"
+>
+  <div class="drop-zone-content">
+    <svg icon="upload"></svg>
+    <span class="medium-text"> Перетягніть сюди зображення або Загрузіть </span>
+  </div>
+  <input
+    type="file"
+    tabindex="-1"
+    #fileDrop
+    class="avatar-input"
+    (change)="fileBrowserHandler($event)"
+  />
+</div>

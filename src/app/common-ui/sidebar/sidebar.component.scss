@@ -2,6 +2,8 @@
   display: block;
   padding: 20px 12px;
   background-color: black;
+  position: relative;
+  height: 100dvh;
 }
 
 .main-menu-list {
@@ -37,6 +39,26 @@
   }
 }
 
+.sidebar__footer {
+  position: absolute;
+  bottom: 20px;
+  display: grid;
+  align-items: center;
+  grid-gap: 10px;
+  background: var(--dark-hover-color);
+  border-radius: 2px;
+  padding: 4px 16px;
+  grid-template-columns: 31px 1fr 16px;
+  img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+}
+.username-text {
+  color: var(--primary-color);
+}
+
 .menu-item svg {
   width: 16px;
   height: 16px;
@@ -54,4 +76,14 @@
   width: 18px;
   height: 18px;
   color: var(--primary-color);
+}
+.settings-btn {
+  // width: 16px;
+  // height: 16px;
+
+  svg {
+    width: 13px;
+    height: 13px;
+    color: var(--primary-color);
+  }
 }

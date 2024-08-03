@@ -1,0 +1,16 @@
+:host {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  grid-gap: 12px;
+}
+
+img {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+}
+
+.username-and-name{
+text-align:left;
+
+}
